@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --white: #ffffff;
+  --primary: #2347d6;
+  --accent: #3b6fed;
+  --neutral-100: #f1f5f9;
+  --neutral-300: #e2e8f0;
+  --neutral-600: #64748b;
+  --neutral-700: #475569;
+  --neutral-900: #0f172a;
+  --error: #dc2626;
+  --success: #16a34a;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.dashboard-container {
+  min-height: 100vh;
+  background-color: #f6f7f9;
+  font-family: var(--font-family);
+}
+
+.dashboard-nav {
+  background: var(--white);
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--neutral-300);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+
+.nav-logo {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(160deg, var(--primary) 0%, var(--accent) 100%);
+  color: var(--white);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.logout-btn {
+  padding: 9px 18px;
+  background: var(--white);
+  border: 1px solid var(--neutral-300);
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--neutral-700);
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.logout-btn:hover {
+  background: var(--error);
+  color: var(--white);
+  border-color: var(--error);
+}
+
+.dashboard-main {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  font-size: 15px;
+  color: var(--neutral-600);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.dashboard-card {
+  background: var(--white);
+  padding: 28px 22px;
+  border-radius: 10px;
+  border: 1px solid var(--neutral-300);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  text-align: center;
+}
+
+.dashboard-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.card-icon {
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+
+.dashboard-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 8px;
+}
+
+.dashboard-card p {
+  font-size: 13px;
+  color: var(--neutral-600);
+  margin-bottom: 18px;
+  min-height: 36px;
+}
+
+.card-email {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.card-btn {
+  padding: 9px 16px;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 13px;
+  transition: background-color 0.15s ease;
+  width: 100%;
+}
+
+.card-btn:hover {
+  background: #1b39ad;
+}
+
+.dashboard-footer {
+  background: var(--white);
+  padding: 28px;
+  border-radius: 10px;
+  border: 1px solid var(--neutral-300);
+}
+
+.footer-content h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 20px;
+}
+
+.session-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-item .label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--neutral-600);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-item .value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+
+.status-active {
+  color: var(--success) !important;
+  background: #dcfce7;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  width: fit-content;
+}
+
+@media (max-width: 768px) {
+  .dashboard-nav {
+    padding: 16px 20px;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .dashboard-main {
+    padding: 24px 16px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 22px;
+  }
+
+  .dashboard-grid {
+    gap: 14px;
+  }
+}

@@ -79,8 +79,8 @@ WSGI_APPLICATION = 'authcore.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'authcore_db',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
         'USER': 'root',
         'PASSWORD': 'Gokul123',
         'HOST': 'localhost',
